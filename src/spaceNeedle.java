@@ -1,7 +1,7 @@
 import com.sun.glass.ui.Size;
 
 public class spaceNeedle {
-    final static int SIZE = 3; //When SIZE is changed, the height/width of the needle will also change
+    final static int SIZE = 3;
 
     public static void main(String[] args){
     needle();
@@ -13,8 +13,6 @@ public class spaceNeedle {
     topDome(false);
     spacer();
     }
-    // Pre: none
-    // Post: Prints out the needle portion
     public static void needle() {
         for (int i = 1; i <= SIZE; i++) {
             for (int space = 1; space <= SIZE*3; space++) {
@@ -49,11 +47,23 @@ public class spaceNeedle {
         }
     }
     public static void bottomDome() {
-
+        for (int i = SIZE; i >= 1; i--){
+            for (int space = 1; space <= (SIZE-i)*2; space++){
+                System.out.print(" ");
+            }
+            System.out.print("\\_/\\");
+            for (int j = i; j >= 1; j--) {
+                System.out.print("/\\");
+            }
+            for (int k = i; k >= 1; k--) {
+                System.out.print("/\\");
+            }
+            System.out.println("/\\_/");
+        }
     }
     public static void body() {
         for (int i = 1; i <= SIZE*SIZE; i++) {
-            for (int space = 1; space <= SIZE*2; space++) {
+            for (int space = 1; space <= (SIZE)*2; space++) {
                 System.out.print(" ");
             }
             System.out.println("|%%||%%|");
