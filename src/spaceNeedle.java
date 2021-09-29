@@ -4,14 +4,14 @@ public class spaceNeedle {
     final static int SIZE = 3;
 
     public static void main(String[] args){
-    needle();
-    topDome(true);
-    spacer();
-    bottomDome();
-    needle();
-    body();
-    topDome(false);
-    spacer();
+        needle();
+        topDome(true);
+        spacer();
+        bottomDome();
+        needle();
+        body();
+        topDome(false);
+        spacer();
     }
     public static void needle() {
         for (int i = 1; i <= SIZE; i++) {
@@ -48,22 +48,19 @@ public class spaceNeedle {
     }
     public static void bottomDome() {
         for (int i = SIZE; i >= 1; i--){
-            for (int space = 1; space <= (SIZE-i)*2; space++){
+            for (int space = 1; space <= (SIZE-i)*2+1; space++){
                 System.out.print(" ");
             }
-            System.out.print("\\_/\\");
-            for (int j = i; j >= 1; j--) {
+            System.out.print("\\_");
+            for (int j = i*SIZE; j >= 1; j--) {
                 System.out.print("/\\");
             }
-            for (int k = i; k >= 1; k--) {
-                System.out.print("/\\");
-            }
-            System.out.println("/\\_/");
+            System.out.println("_/");
         }
     }
     public static void body() {
         for (int i = 1; i <= SIZE*SIZE; i++) {
-            for (int space = 1; space <= (SIZE)*2; space++) {
+            for (int space = 1; space <= (SIZE-1)*3; space++) {
                 System.out.print(" ");
             }
             System.out.println("|%%||%%|");
