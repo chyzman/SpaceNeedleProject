@@ -1,7 +1,7 @@
 import com.sun.glass.ui.Size;
 
 public class spaceNeedle {
-    final static int SIZE = 3;
+    final static int SIZE = 10;
 
     public static void main(String[] args){
         needle();
@@ -52,7 +52,7 @@ public class spaceNeedle {
                 System.out.print(" ");
             }
             System.out.print("\\_");
-            for (int j = i*SIZE; j >= 1; j--) {
+            for (int j = SIZE+(i-1)*2; j >= 1; j--) {
                 System.out.print("/\\");
             }
             System.out.println("_/");
